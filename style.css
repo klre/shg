@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 200px;
+  padding: 10px;
+  background: #fff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Map */
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  flex: 1;
+}
+.base-image {
+  display: block;
+  height: 100vh;
+  width: auto;
+}
+
+/* Zoom UI */
+
+.zoom-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 4px;
+}
+
+.zoom-controls button {
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Markers */
+
+.marker-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.map-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+
+#markers-container, .ui-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+.marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.marker-label {
+  font-size: 11px;
+  background: rgba(255,255,255,0.85);
+  padding: 1px 3px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+
+/* Marker colors */
+
+.marker-AG { background: #a3ccc0; accent-color:#a3ccc0; }
+.marker-int  { background: #45bfe4; accent-color: #45bfe4; }
+.marker-AV   { background: #e66d6d; accent-color: #e66d6d; }
+.marker-contemp   { background: #F2D16B; accent-color: #F2D16B; }
+.marker-tactile   { background:  #d16aa3; accent-color: #d16aa3; }
+.marker-feedback   { background:  #395c79; accent-color: #395c79; }
+
+/* Modals */
+
+.marker-modal {
+  position: absolute;
+  width: 220px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+  display: none;
+  z-index: 5;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  pointer-events: auto;
+}
+
+/* Research colours */
+
+ash { color:#ba7821; }
+hc  { color:#395c79; }
+re  { color:#b09b81; }
+p1  { color:#81abb0; }
+eh  { color:#994b6a; }
+
+/* Buttons */
+
+.zoom-controls button {
+  background-color: #395c79;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Woodcut",
+    "position": { "top": "32%", "left": "42%" },
+    "title": "Woodcut print",
+    "content": "Woodblock and samples"
+  }, 
+   {
+    "name": "Bricks",
+    "position": { "top": "69%", "left": "72.4%" },
+    "title": "Bricks",
+    "content": "Convict bricks, material"
+  }, 
+   {
+    "name": "Shards",
+    "position": { "top": "59%", "left": "90%" },
+    "title": "Shards",
+    "content": "Pottery shards, motifs"
+  }, 
+   {
+    "name": "Stone",
+    "position": { "top": "51%", "left": "85%" },
+    "title": "Singapore Stone",
+    "content": "Raised text"
+  }, 
+   {
+    "name": "EOA",
+   "position": { "top": "89%", "left": "49%" },
+    "title": "Empress of Asia",
+    "content": "Model, shrapnel"
+  }, 
+   {
+    "name": "Playgrounds",
+   "position": { "top": "78%", "left": "5.5%" },
+    "title": "Playgrounds",
+    "content": "Models, mosaic tiles"
+  }
+]

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SHG</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <div class="sidebar">
+    <h1>SHG</h1>
+
+    <h3>Markers</h3>
+
+    <label>
+  <input type="checkbox"
+         id="toggle-all"
+         checked>
+  Show All
+</label><br>
+    <label>
+      <input type="checkbox" class="marker-toggle marker-contemp" data-type="contemp">
+      Contemporary
+    </label><br>
+
+
+    <label>
+      <input type="checkbox" class="marker-toggle marker-AG" data-type="AG">
+     Audio guide
+    </label><br>
+
+      <input type="checkbox" class="marker-toggle marker-AV" data-type="AV">
+      A/V
+    </label><br>
+
+    <label>
+      <input type="checkbox" class="marker-toggle marker-int" data-type="int">
+     Interactive
+    </label><br>  
+    <label>
+      <input type="checkbox" class="marker-toggle marker-tactile" data-type="tactile" >
+      Tactile board
+    </label><br>
+
+     <label>
+      <input type="checkbox" class="marker-toggle marker-feedback" data-type="feedback">
+      Feedback
+    </label><br>
+   
+   
+    <!--
+    <label>
+      <input type="checkbox" class="marker-toggle" data-type="red">
+      Audio
+    </label>
+    -->
+<!--
+    <h3>Research Key</h3>
+    <re>Notes</re>-->
+  </div>
+
+  <div class="image-container">
+    <div class="zoom-controls">
+      <button id="zoom-in">+</button>
+      <button id="zoom-out">−</button>
+      <button id="zoom-reset">Reset</button>
+    </div>
+
+    <div class="map-layer">
+  <img src="./images/Maps/SHG.jpg"
+       class="base-image"
+       alt="Map">
+  
+</div>
+<div id="markers-container"></div>
+<div class="ui-layer"></div>
+    
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="./shg-script.js"></script>
+</body>
+</html>
