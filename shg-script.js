@@ -41,26 +41,32 @@ async function loadMarkers() {
 $(document).ready(function () {
   const $img = $('.base-image');
 
-  function init() {
-    renderMarkers();
-    updatePositions();
+  async function init() {
+    await loadMarkers();        // wait for JSON
+    renderMarkers();            // create DOM
+
+    updatePositions();          // now safe
+
     setupZoom();
     setupPan();
     setupModals();
     setupMasterToggle();
 
-    // apply toggle state if needed
+    $('.marker-toggle').prop('checked', false);
+    $('#toggle-all').prop('checked', false);
     $('.marker-toggle').trigger('change');
   }
 
-  if ($img[0].complete) {
-    init(); // image already cached
-  } else {
-    $img.on('load', init); // wait for image
+  function startWhenReady() {
+    if ($img[0].complete && $img[0].naturalWidth !== 0) {
+      init();
+    } else {
+      $img.on('load', init);
+    }
   }
 
-  
-  $('.marker-toggle').trigger('change');
+  startWhenReady();
+
 });
 
 /* =====================================================
