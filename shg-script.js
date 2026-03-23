@@ -38,14 +38,26 @@ async function loadMarkers() {
    INIT
    ===================================================== */
 
-$(document).ready(async function () {
-  await loadMarkers();
-  renderMarkers();
-  updatePositions();
-  setupZoom();
-  setupPan();
-  setupModals();
-  setupMasterToggle();
+$(document).ready(function () {
+  const $img = $('.base-image');
+
+  function init() {
+    renderMarkers();
+    updatePositions();
+    setupZoom();
+    setupPan();
+    setupModals();
+    setupMasterToggle();
+
+    // apply toggle state if needed
+    $('.marker-toggle').trigger('change');
+  }
+
+  if ($img[0].complete) {
+    init(); // image already cached
+  } else {
+    $img.on('load', init); // wait for image
+  }
 
   
   $('.marker-toggle').trigger('change');
