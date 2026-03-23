@@ -1,8 +1,56 @@
 [
   {
-    "name": "Reactions",
+    "name": "interviews",
+    "position": { "top": "75%", "left": "87%" },
+    "title": "Orang Laut interviews",
+    "content": "Interviews with Orang Laut SG"
+  },
+  {
+    "name": "★Census",
+    "position": { "top": "43%", "left": "68%" },
+    "title": "Census data",
+    "content": "Comparing past and present census data of Singapore"
+  },
+  {
+    "name": "★Surrender<br>vid",
+    "position": { "top": "66%", "left": "46%" },
+    "title": "TBC",
+    "content": "TBC"
+  },
+  {
+    "name": "★Separation",
     "position": { "top": "59%", "left": "32%" },
     "title": "Reactions to separation",
-    "content": "LKY press conference"
+    "content": "Contemporary responses to separation from Malaysia"
+  },
+  {
+    "name": "Gurkhas",
+    "position": { "top": "67%", "left": "41%" },
+    "title": "Gurkhas",
+    "content": "Zakaria Zainal's portraits of Gurkha soldiers"
+  },
+  {
+    "name": "Hawkers",
+    "position": { "top": "50%", "left": "7%" },
+    "title": "Reactions to separation",
+    "content": "Photographs of hawkers during COVID-19"
+  },
+  {
+    "name": "Loutit",
+    "position": { "top": "8%", "left": "28%" },
+    "title": "Keith Loutit video",
+    "content": "Presenting the changing cityscape of Singapore"
+  },
+  {
+    "name": "ID<br>Markers",
+    "position": { "top": "37%", "left": "22%" },
+    "title": "Identity markers",
+    "content": "Presenting the changing cityscape of Singapore"
+  },
+  {
+    "name": "migrants",
+    "position": { "top": "44%", "left": "24%" },
+    "title": "Interviews with migrants",
+    "content": "Presenting the changing cityscape of Singapore"
   }
 ]

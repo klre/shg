@@ -1,8 +1,41 @@
 [
   {
-    "name": "SHG 1",
-    "position": { "top": "68%", "left": "97%" },
-    "title": "SHG Intro",
-    "content": "<i>1895-1897</i><br>"
+    "name": "SG<br>Stone",
+    "position": { "top": "51%", "left": "84%" },
+    "title": "Singapore Stone",
+    "content": "Multimedia show?"
+  },
+
+  {
+    "name": "Sejarah<br>Melayu",
+    "position": { "top": "52%", "left": "78%" },
+    "title": "Sejarah Melayu",
+    "content": "Flip through of book contents"
+  },
+
+  {
+    "name": "Shard",
+    "position": { "top": "57%", "left": "89%" },
+    "title": "Shards",
+    "content": "Learning different types of shards"
+  },
+
+  {
+    "name": "OL interviews",
+     "position": { "top": "75%", "left": "87%" },
+    "title": "Orang Laut interviews",
+    "content": "Interviews with Orang Laut SG"
+  },
+  {
+    "name": "Rickshaw",
+    "position": { "top": "28%", "left": "69%" },
+    "title": "Census data",
+    "content": "Comparing past and present census data of Singapore"
+  },
+  {
+    "name": "Census",
+    "position": { "top": "43%", "left": "68%" },
+    "title": "Census data",
+    "content": "Comparing past and present census data of Singapore"
   }
 ]

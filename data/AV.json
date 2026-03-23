@@ -1,7 +1,27 @@
 [
+  
+  {
+    "name": "Boat music",
+    "position": { "top": "66%", "left": "86%" },
+    "title": "Boat music",
+    "content": "Soundscape"
+  },
+  {
+    "name": "Surrender<br>vid",
+    "position": { "top": "66%", "left": "46%" },
+    "title": "TBC",
+    "content": "TBC"
+  },
+  {
+    "name": "Sook Ching",
+    "position": { "top": "46%", "left": "50%" },
+    "title": "TBC",
+    "content": "TBC"
+  },
+  
   {
     "name": "Separation",
-    "position": { "top": "65%", "left": "34%" },
+    "position": { "top": "65%", "left": "33%" },
     "title": "Separation video",
     "content": "LKY press conference"
   }
