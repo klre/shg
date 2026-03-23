@@ -1,15 +1,27 @@
 [
   {
-    "name": "interviews",
+    "name": "Kolek",
+    "position": { "top": "45%", "left": "93%" },
+    "title": "Kolek",
+    "content": "Model ship framing living maritime heritage"
+  },
+  {
+    "name": "Voices of<br>the Sea",
     "position": { "top": "75%", "left": "87%" },
-    "title": "Orang Laut interviews",
-    "content": "Interviews with Orang Laut SG"
+    "title": "Voices of the Sea",
+    "content": "Interviews with Orang Laut SG, connecting contemporary communities to history"
   },
   {
     "name": "★Census",
     "position": { "top": "43%", "left": "68%" },
-    "title": "Census data",
-    "content": "Comparing past and present census data of Singapore"
+    "title": "Many communities, one colony",
+    "content": "Visual presentation of Singapore's population profile from 1820s to 1930s"
+  },
+  {
+    "name": "Tan Chong Tee",
+    "position": { "top": "61%", "left": "58%" },
+    "title": "Tan Chong Tee",
+    "content": "Contemporary painting examining responses to war"
   },
   {
     "name": "★Surrender<br>vid",
@@ -30,9 +42,27 @@
     "content": "Zakaria Zainal's portraits of Gurkha soldiers"
   },
   {
-    "name": "Hawkers",
-    "position": { "top": "50%", "left": "7%" },
-    "title": "Reactions to separation",
+    "name": "★Randy Yeo",
+    "position": { "top": "77%", "left": "3%" },
+    "title": "Randy Yeo's seating",
+    "content": "Pairing of local design commission with Arthur Yap's poem"
+  },
+  {
+    "name": "Hawker<br>dialogues",
+    "position": { "top": "48%", "left": "9%" },
+    "title": "Hawker dialogues",
+    "content": "Contemporary conversations: Bourdain and CNA documentaries"
+  },
+  {
+    "name": "Hawker<br>Colours",
+    "position": { "top": "48%", "left": "9%" },
+    "title": "Hawker colours",
+    "content": "Hans Tan studio tableware"
+  },
+  {
+    "name": "Bob Lee",
+    "position": { "top": "50%", "left": "8%" },
+    "title": "Bob Lee photographs",
     "content": "Photographs of hawkers during COVID-19"
   },
   {
@@ -42,15 +72,33 @@
     "content": "Presenting the changing cityscape of Singapore"
   },
   {
+    "name": "How we act<br>in the world",
+    "position": { "top": "22%", "left": "24%" },
+    "title": "How we act<br>in the world",
+    "content": "Means of outreach internationally"
+  },
+  {
+    "name": "How we live",
+    "position": { "top": "44%", "left": "17%" },
+    "title": "How we live in our transforming city",
+    "content": "Edwin Koo's transit; Rebuilding homes in Dakota Crescent and Tanglin"
+  },
+  {
     "name": "ID<br>Markers",
     "position": { "top": "37%", "left": "22%" },
     "title": "Identity markers",
-    "content": "Presenting the changing cityscape of Singapore"
+    "content": "How we continue to anchor Singaporean identity"
   },
   {
-    "name": "migrants",
+    "name": "Being Together",
+    "position": { "top": "34%", "left": "26%" },
+    "title": "Being Together",
+    "content": "John Clang's work on maintaining a sense of belonging"
+  },
+  {
+    "name": "Who are we today?",
     "position": { "top": "44%", "left": "24%" },
-    "title": "Interviews with migrants",
-    "content": "Presenting the changing cityscape of Singapore"
+    "title": "Who are we today?",
+    "content": "First-person voices and faces of people who live here - 1st- 4th gen migrants"
   }
 ]
