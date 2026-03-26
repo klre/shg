@@ -48,6 +48,7 @@ $(document).ready(function () {
     setupModals();
     setupMasterToggle();
 
+    $('.base-image').on('dragstart', e => e.preventDefault());
     $('.marker-toggle').prop('checked', false);
     $('#toggle-all').prop('checked', false);
     $('.marker-toggle').trigger('change');
