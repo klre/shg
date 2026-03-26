@@ -188,14 +188,17 @@ function setupPan() {
   const $container = $('.image-container');
 
   $container.on('mousedown', e => {
-    if (e.button !== 0 && e.button !== 2) return;
-    if ($(e.target).closest('.marker').length) return;
+  if (e.button !== 0) return;
+  if ($(e.target).closest('.marker').length) return;
 
-    isPanning = true;
-    startX = e.clientX - panX;
-    startY = e.clientY - panY;
-    $container.css('cursor', 'grabbing');
-  });
+  e.preventDefault(); // 🔥 CRITICAL FIX
+
+  isPanning = true;
+  startX = e.clientX - panX;
+  startY = e.clientY - panY;
+
+  $container.css('cursor', 'grabbing');
+});
 
   $(document).on('mousemove', e => {
     if (!isPanning) return;
@@ -249,8 +252,8 @@ function setupMasterToggle() {
   });
 }
 
-/* ================= DISABLE CONTEXT MENU ================= */
+/* ================= DISABLE RIGHT CLICK ================= */
 
-$('.image-container').on('contextmenu', function (e) {
-  e.preventDefault();
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
 });
