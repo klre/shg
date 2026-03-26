@@ -1,103 +1,121 @@
 [
   {
     "name": "Kolek",
-    "position": { "top": "45%", "left": "93%" },
+    "x":  3153, 
+    "y": 627,
     "title": "Kolek",
     "content": "Model ship framing living maritime heritage"
   },
   {
     "name": "Voices of<br>the Sea",
-    "position": { "top": "75%", "left": "87%" },
+    "x":  3043, 
+    "y": 981,
     "title": "Voices of the Sea",
     "content": "Interviews with Orang Laut SG, connecting contemporary communities to history"
   },
   {
     "name": "★Census",
-    "position": { "top": "43%", "left": "68%" },
+    "x":  2347, 
+    "y": 567,
     "title": "Many communities, one colony",
     "content": "Visual presentation of Singapore's population profile from 1820s to 1930s"
   },
   {
     "name": "Tan Chong Tee",
-    "position": { "top": "61%", "left": "58%" },
+    "x": 2074,
+    "y":  804,
     "title": "Tan Chong Tee",
     "content": "Contemporary painting examining responses to war"
   },
   {
     "name": "★Surrender<br>vid",
-    "position": { "top": "66%", "left": "46%" },
+    "x":  1182, 
+    "y": 841,
     "title": "TBC",
     "content": "TBC"
   },
   {
     "name": "★Separation",
-    "position": { "top": "59%", "left": "32%" },
+    "x":  1418, 
+    "y": 824,
     "title": "Reactions to separation",
     "content": "Contemporary responses to separation from Malaysia"
   },
   {
     "name": "Gurkhas",
-    "position": { "top": "67%", "left": "41%" },
+    "x":  1418, 
+    "y": 824,
     "title": "Gurkhas",
     "content": "Zakaria Zainal's portraits of Gurkha soldiers"
   },
   {
     "name": "★Randy Yeo",
-    "position": { "top": "77%", "left": "3%" },
+
+   "x": 196,
+    "y": 984,
     "title": "Randy Yeo's seating",
     "content": "Pairing of local design commission with Arthur Yap's poem"
   },
   {
     "name": "Hawker<br>dialogues",
-    "position": { "top": "48%", "left": "9%" },
+   "x": 346,
+    "y": 657,
     "title": "Hawker dialogues",
     "content": "Contemporary conversations: Bourdain and CNA documentaries"
   },
   {
     "name": "Hawker<br>Colours",
-    "position": { "top": "48%", "left": "9%" },
+   "x": 296,
+    "y": 771,
     "title": "Hawker colours",
     "content": "Hans Tan studio tableware"
   },
   {
     "name": "Bob Lee",
-    "position": { "top": "50%", "left": "8%" },
+   "x": 309,
+    "y": 707,
     "title": "Bob Lee photographs",
     "content": "Photographs of hawkers during COVID-19"
   },
   {
     "name": "Loutit",
-    "position": { "top": "8%", "left": "28%" },
+     "x": 948,
+    "y": 116,
     "title": "Keith Loutit video",
     "content": "Presenting the changing cityscape of Singapore"
   },
   {
     "name": "How we act<br>in the world",
-    "position": { "top": "22%", "left": "24%" },
+     "x": 864,
+    "y": 308,
     "title": "How we act<br>in the world",
     "content": "Means of outreach internationally"
   },
   {
     "name": "How we live",
-    "position": { "top": "44%", "left": "17%" },
+   "x": 646,
+    "y": 547,
     "title": "How we live in our transforming city",
     "content": "Edwin Koo's transit; Rebuilding homes in Dakota Crescent and Tanglin"
   },
   {
     "name": "ID<br>Markers",
-    "position": { "top": "37%", "left": "22%" },
+   "x": 819,
+    "y": 470,
     "title": "Identity markers",
     "content": "How we continue to anchor Singaporean identity"
   },
   {
     "name": "Being Together",
-    "position": { "top": "34%", "left": "26%" },
+   "x": 972,
+    "y": 447,
     "title": "Being Together",
     "content": "John Clang's work on maintaining a sense of belonging"
   },
   {
-    "name": "Who are we today?",
-    "position": { "top": "44%", "left": "24%" },
+    "name": "★Who are we today?",
+   "x": 897,
+    "y": 565,
     "title": "Who are we today?",
     "content": "First-person voices and faces of people who live here - 1st- 4th gen migrants"
   }

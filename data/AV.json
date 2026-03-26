@@ -2,26 +2,30 @@
   
   {
     "name": "Boat music",
-    "position": { "top": "66%", "left": "86%" },
+     "x":  2937, 
+    "y": 868,
     "title": "Boat music",
     "content": "Soundscape"
   },
   {
-    "name": "Surrender<br>vid",
-    "position": { "top": "66%", "left": "46%" },
-    "title": "TBC",
-    "content": "TBC"
+    "name": "Surrender",
+     "x":  1631, 
+    "y": 861,
+    "title": "Surrender video",
+    "content": "Footage of surrender of the British"
   },
   {
     "name": "Sook Ching",
-    "position": { "top": "46%", "left": "50%" },
-    "title": "TBC",
+     "x":  1824, 
+    "y": 630,
+    "title": "Sook Ching projection",
     "content": "TBC"
   },
   
   {
     "name": "Separation",
-    "position": { "top": "65%", "left": "33%" },
+     "x":  1185, 
+    "y": 834,
     "title": "Separation video",
     "content": "LKY press conference"
   }

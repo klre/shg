@@ -1,14 +1,16 @@
 [
   {
     "name": "Precol",
-    "position": { "top": "76%", "left": "82%" },
+     "x":  2770, 
+    "y": 1024,
     "title": "Feedback",
     "content": "Question"
   },
   
   {
     "name": "Col",
-    "position": { "top": "52%", "left": "66%" },
+     "x": 2214, 
+    "y": 671,
     "title": "Feedback",
     "content": "Question"
   },
@@ -16,35 +18,40 @@
   
   {
     "name": "War",
-    "position": { "top": "30%", "left": "57%" },
+     "x":  1944, 
+    "y": 434,
     "title": "Feedback",
     "content": "Question"
   },
   
   {
     "name": "New ID",
-    "position": { "top": "48%", "left": "35%" },
+     "x":  1095, 
+    "y": 687,
     "title": "Feedback",
     "content": "Question"
   },
 
   {
     "name": "Becoming",
-    "position": { "top": "86%", "left": "11%" },
+     "x":  123, 
+    "y": 961,
     "title": "Feedback",
     "content": "Question"
   },
 
   {
     "name": "Being",
-    "position": { "top": "38%", "left": "5%" },
+     "x":  203, 
+    "y": 530,
     "title": "Feedback",
     "content": "Question"
   },
 
   {
     "name": "LG",
-    "position": { "top": "33%", "left": "24%" },
+     "x":  812, 
+    "y": 450,
     "title": "Feedback",
     "content": "Question"
   }

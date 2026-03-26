@@ -1,41 +1,54 @@
 [
   {
     "name": "SG<br>Stone",
-    "position": { "top": "51%", "left": "84%" },
+     "x":  2863, 
+    "y": 657,
     "title": "Singapore Stone",
     "content": "Multimedia show?"
   },
 
   {
     "name": "Sejarah<br>Melayu",
-    "position": { "top": "52%", "left": "78%" },
+     "x": 2697, 
+    "y": 697,
     "title": "Sejarah Melayu",
     "content": "Flip through of book contents"
   },
 
   {
-    "name": "Shard",
-    "position": { "top": "57%", "left": "89%" },
+    "name": "Shards",
+     "x":  3043, 
+    "y": 751,
     "title": "Shards",
-    "content": "Learning different types of shards"
+    "content": "Learning about different types of shards from the Shah Muncher"
   },
 
   {
-    "name": "OL interviews",
-     "position": { "top": "75%", "left": "87%" },
-    "title": "Orang Laut interviews",
-    "content": "Interviews with Orang Laut SG"
+    "name": "Voices of<br>the Sea",
+    "x":  3043, 
+    "y": 981,
+    "title": "Voices of the Sea",
+    "content": "Interviews with Orang Laut SG, connecting contemporary communities to history"
   },
   {
     "name": "Rickshaw",
-    "position": { "top": "28%", "left": "69%" },
+     "x":  2414, 
+    "y": 457,
     "title": "Census data",
     "content": "Comparing past and present census data of Singapore"
   },
   {
     "name": "Census",
-    "position": { "top": "43%", "left": "68%" },
+    "x":  2347, 
+    "y": 567,
     "title": "Census data",
     "content": "Comparing past and present census data of Singapore"
+  },
+  {
+    "name": "Tan Chong Tee",
+    "x": 2074,
+    "y":  804,
+    "title": "Tan Chong Tee",
+    "content": "Contemporary painting examining responses to war"
   }
 ]
