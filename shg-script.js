@@ -248,3 +248,9 @@ function setupMasterToggle() {
     $('.marker-toggle').prop('checked', checked).trigger('change');
   });
 }
+
+/* ================= DISABLE CONTEXT MENU ================= */
+
+$('.image-container').on('contextmenu', function (e) {
+  e.preventDefault();
+});
