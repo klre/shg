@@ -191,7 +191,7 @@ function setupPan() {
   if (e.button !== 0) return;
   if ($(e.target).closest('.marker').length) return;
 
-  e.preventDefault(); // 🔥 CRITICAL FIX
+  e.preventDefault(); 
 
   isPanning = true;
   startX = e.clientX - panX;
