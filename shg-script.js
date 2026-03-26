@@ -1,20 +1,18 @@
 let markers = [];
 
-let scale = 1;
+let scale = 0.6;
 let panX = 0;
 let panY = 0;
 let isPanning = false;
 let startX = 0;
 let startY = 0;
 
-const MIN_SCALE = 0.5;
-const MAX_SCALE = 4;
+const MIN_SCALE = 0.4;
+const MAX_SCALE = 2.5;
 
 const markerCache = [];
 
-/* =====================================================
-   LOAD MULTIPLE JSON FILES
-   ===================================================== */
+/* ================= LOAD ================= */
 
 async function loadMarkers() {
   const files = ['AG', 'int', 'AV', 'contemp', 'feedback', 'tactile'];
@@ -34,18 +32,16 @@ async function loadMarkers() {
   markers = results.flat();
 }
 
-/* =====================================================
-   INIT
-   ===================================================== */
+/* ================= INIT ================= */
 
 $(document).ready(function () {
   const $img = $('.base-image');
 
   async function init() {
-    await loadMarkers();        // wait for JSON
-    renderMarkers();            // create DOM
+    await loadMarkers();
 
-    updatePositions();          // now safe
+    renderMarkers();
+    applyTransform(); 
 
     setupZoom();
     setupPan();
@@ -57,21 +53,14 @@ $(document).ready(function () {
     $('.marker-toggle').trigger('change');
   }
 
-  function startWhenReady() {
-    if ($img[0].complete && $img[0].naturalWidth !== 0) {
-      init();
-    } else {
-      $img.on('load', init);
-    }
+  if ($img[0].complete && $img[0].naturalWidth !== 0) {
+    init();
+  } else {
+    $img.on('load', init);
   }
-
-  startWhenReady();
-
 });
 
-/* =====================================================
-   RENDER
-   ===================================================== */
+/* ================= RENDER ================= */
 
 function renderMarkers() {
   const $markersLayer = $('#markers-container');
@@ -80,10 +69,11 @@ function renderMarkers() {
   markers.forEach(marker => {
     const id = marker.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
-    const topPct = parseFloat(marker.position.top);
-    const leftPct = parseFloat(marker.position.left);
-
-    markerCache.push({ id, topPct, leftPct });
+    markerCache.push({
+      id,
+      x: marker.x,
+      y: marker.y
+    });
 
     $markersLayer.append(`
       <div class="marker-wrapper"
@@ -101,39 +91,16 @@ function renderMarkers() {
       </div>
     `);
   });
+
+  $('.marker-wrapper').hide();
 }
 
-/* =====================================================
-   TOGGLES
-   ===================================================== */
-
-$(document).on('change', '.marker-toggle', function () {
-  const type = $(this).data('type');
-  const visible = this.checked;
-
-  $(`.marker-wrapper[data-type="${type}"]`)
-    .toggle(visible);
-
-  const allChecked =
-    $('.marker-toggle').length ===
-    $('.marker-toggle:checked').length;
-
-  $('#toggle-all').prop('checked', allChecked);
-});
-
-/* =====================================================
-   POSITIONING
-   ===================================================== */
+/* ================= POSITION ================= */
 
 function updatePositions() {
-  const $image = $('.base-image');
-
-  const imgW = $image.width() * scale;
-  const imgH = $image.height() * scale;
-
   markerCache.forEach(m => {
-    const x = panX + (m.leftPct / 100) * imgW;
-    const y = panY + (m.topPct / 100) * imgH;
+    const x = panX + m.x * scale;
+    const y = panY + m.y * scale;
 
     $(`.marker-wrapper[data-id="${m.id}"]`).css({
       transform: `translate(${x}px, ${y}px)`
@@ -141,27 +108,24 @@ function updatePositions() {
 
     const $modal = $('#' + m.id);
     if ($modal.is(':visible')) {
-
       const containerWidth = $('.image-container').width();
       const modalWidth = $modal.outerWidth();
 
-      let modalLeft = x + 40;
+      let left = x + 12;
 
-      if (modalLeft + modalWidth > containerWidth) {
-        modalLeft = x - modalWidth - 2;
+      if (left + modalWidth > containerWidth) {
+        left = x - modalWidth - 12;
       }
 
       $modal.css({
-        left: modalLeft + 'px',
+        left: left + 'px',
         top: y + 'px'
       });
     }
   });
 }
 
-/* =====================================================
-   MAP TRANSFORM
-   ===================================================== */
+/* ================= TRANSFORM ================= */
 
 function applyTransform() {
   clampPan();
@@ -171,12 +135,10 @@ function applyTransform() {
     `translate(${panX}px, ${panY}px) scale(${scale})`
   );
 
-  updatePositions();
+  updatePositions(); // 🔥 REQUIRED
 }
 
-/* =====================================================
-   PAN LIMITS
-   ===================================================== */
+/* ================= PAN LIMITS ================= */
 
 function clampPan() {
   const $container = $('.image-container');
@@ -192,9 +154,7 @@ function clampPan() {
   panY = Math.min(0, Math.max(ch - ih, panY));
 }
 
-/* =====================================================
-   ZOOM
-   ===================================================== */
+/* ================= ZOOM ================= */
 
 function setupZoom() {
   $('#zoom-in').on('click', () => {
@@ -208,7 +168,7 @@ function setupZoom() {
   });
 
   $('#zoom-reset').on('click', () => {
-    scale = 1;
+    scale = 0.6;
     panX = 0;
     panY = 0;
     applyTransform();
@@ -222,9 +182,7 @@ function setupZoom() {
   });
 }
 
-/* =====================================================
-   PAN
-   ===================================================== */
+/* ================= PAN ================= */
 
 function setupPan() {
   const $container = $('.image-container');
@@ -246,17 +204,13 @@ function setupPan() {
     applyTransform();
   });
 
-  function stopPan() {
+  $(document).on('mouseup mouseleave blur dragstart', () => {
     isPanning = false;
-    $container.css('cursor', 'grab');
-  }
-
-  $(document).on('mouseup mouseleave blur dragstart', stopPan);
+    $('.image-container').css('cursor', 'grab');
+  });
 }
 
-/* =====================================================
-   MODALS
-   ===================================================== */
+/* ================= MODALS ================= */
 
 function setupModals() {
   $('.image-container').on('click', '.marker', function (e) {
@@ -271,15 +225,26 @@ function setupModals() {
   });
 }
 
-/* =====================================================
-   MASTER TOGGLE
-   ===================================================== */
+/* ================= TOGGLES ================= */
+
+$(document).on('change', '.marker-toggle', function () {
+  const type = $(this).data('type');
+  const visible = this.checked;
+
+  $(`.marker-wrapper[data-type="${type}"]`).toggle(visible);
+
+  const allChecked =
+    $('.marker-toggle').length ===
+    $('.marker-toggle:checked').length;
+
+  $('#toggle-all').prop('checked', allChecked);
+});
+
+/* ================= MASTER ================= */
 
 function setupMasterToggle() {
   $(document).on('change', '#toggle-all', function () {
     const checked = this.checked;
-
-    $('.marker-toggle').prop('checked', checked);
-    $('.marker-toggle').trigger('change');
+    $('.marker-toggle').prop('checked', checked).trigger('change');
   });
 }
